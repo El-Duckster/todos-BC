@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { useContract } from './useContract'; // Assuming this is the path to your useContract hook
+import { useContract } from './useContract'; 
 
 
 
@@ -8,7 +8,7 @@ export const useTodoList = (refreshWalletBalance) => {
     const { readContract, writeContract } = useContract();
     const [todos, setTodos] = useState([]);
 
-    // Fetching todos from the blockchain
+  
     const fetchTodos = useCallback(async () => {
         if (!readContract) return;
 
@@ -44,7 +44,7 @@ export const useTodoList = (refreshWalletBalance) => {
         }
     };
 
-    // Toggling the completion status of a todo
+ 
     const toggleTodo = async (id) => {
         if (!writeContract) return;
 

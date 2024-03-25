@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import { abi, contractAddress } from '../config';
 
-// Example JSON-RPC URL; replace with your actual URL
+
 const ganacheUrl = 'http://127.0.0.1:7545';
 
 export const useContract = () => {

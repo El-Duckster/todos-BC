@@ -1,7 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { ethers } from "ethers";
 
-// Example JSON-RPC URL; replace with your actual URL
 const ganacheUrl = "http://127.0.0.1:7545";
 
 const useWallet = () => {
@@ -14,8 +13,7 @@ const useWallet = () => {
   useEffect(() => {
     const connectWallet = async () => {
       try {
-        // Since we're using JsonRpcProvider, account fetching and balance might need adjustments
-        // For Ganache, accounts are unlocked by default, so this method can directly fetch them
+        
         const accounts = await provider.listAccounts();
         const balance = await provider.getBalance(accounts[0]);
         setWallet({
