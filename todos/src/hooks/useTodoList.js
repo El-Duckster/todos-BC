@@ -26,7 +26,7 @@ export const useTodoList = (refreshWalletBalance) => {
         }
     }, [readContract]);
 
-    // Creating a new todo
+
     const createTodo = async (text) => {
         if (!writeContract) return;
 
@@ -58,7 +58,7 @@ export const useTodoList = (refreshWalletBalance) => {
         }
     };
 
-    // Removing a todo
+
     const removeTodo = async (id) => {
         if (!writeContract) return;
 
@@ -72,7 +72,7 @@ export const useTodoList = (refreshWalletBalance) => {
         }
     };
 
-    // Fetch todos when the component mounts
+  
     useEffect(() => {
         fetchTodos();
     }, [fetchTodos]);
