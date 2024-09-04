@@ -8,7 +8,29 @@ export const useTodoList = (refreshWalletBalance) => {
     const { readContract, writeContract } = useContract();
     const [todos, setTodos] = useState([]);
 
-  
+    // import { useEffect, useState } from 'react';
+
+    // Assuming `readContract` is defined and available in your component
+    // const [todos, setTodos] = useState([]);
+    
+    // useEffect(() => {
+    //     const fetchTodos = async () => {
+    //         if (!readContract) return;
+    
+    //         try {
+            
+    //             const todos = await readContract.getAllTodos();
+    //             const filteredTodos = todos.filter(todo => todo.text !== '');
+    //             setTodos(filteredTodos);
+    //         } catch (error) {
+    //             console.error("Failed to fetch todos", error);
+            
+    //         }
+    //     };
+    
+    //     fetchTodos();
+    // }, [readContract]);
+    
     const fetchTodos = useCallback(async () => {
         if (!readContract) return;
 
